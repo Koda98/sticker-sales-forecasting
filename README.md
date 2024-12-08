@@ -9,16 +9,16 @@ The goal of this project is to forecast sticker sales in different countries. Th
 - [ ] `README.md` with
   - [x] Description of the problem
   - [ ] Instructions on how to run the project
-- [ ] Data
-  - [ ] You should either commit the dataset you used or have clear instructions how to download the dataset
-- [ ] Notebook (suggested name - `notebook.ipynb`) with
+- [x] Data
+  - [x] You should either commit the dataset you used or have clear instructions how to download the dataset
+- [ ] Notebook
   - [ ] Data preparation and data cleaning
   - [ ] EDA, feature importance analysis
   - [ ] Model selection process and parameter tuning
-- [ ] Script `train.py` (suggested name)
+- [ ] Script `train.py`
   - [ ] Training the final model
   - [ ] Saving it to a file (e.g. pickle) or saving it with specialized software (BentoML)
-- [ ] Script `predict.py` (suggested name)
+- [ ] Script `predict.py`
   - [ ] Loading the model
   - [ ] Serving it via a web service (with Flask or specialized software - BentoML, KServe, etc)
 - [ ] Files with dependencies
