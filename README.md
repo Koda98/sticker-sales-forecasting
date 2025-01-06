@@ -13,7 +13,7 @@ The goal of this project is to forecast sticker sales in different countries. Th
   - [x] You should either commit the dataset you used or have clear instructions how to download the dataset
 - [ ] Notebook
   - [ ] Data preparation and data cleaning
-  - [ ] EDA, feature importance analysis
+  - [ ] EDA (ranges of values, missing values, analysis of target variable, feature importance analysis)
   - [ ] Model selection process and parameter tuning
 - [ ] Script `train.py`
   - [ ] Training the final model
