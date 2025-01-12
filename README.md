@@ -15,9 +15,9 @@ The goal of this project is to forecast sticker sales in different countries. Th
   - [x] Data preparation and data cleaning
   - [x] EDA (ranges of values, missing values, analysis of target variable, feature importance analysis)
   - [x] Model selection process and parameter tuning
-- [ ] Script `train.py`
-  - [ ] Training the final model
-  - [ ] Saving it to a file (e.g. pickle) or saving it with specialized software (BentoML)
+- [x] Script `train.py`
+  - [x] Training the final model
+  - [x] Saving it to a file (e.g. pickle) or saving it with specialized software (BentoML)
 - [ ] Script `predict.py`
   - [ ] Loading the model
   - [ ] Serving it via a web service (with Flask or specialized software - BentoML, KServe, etc)
