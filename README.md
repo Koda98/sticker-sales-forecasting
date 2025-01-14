@@ -23,7 +23,7 @@ The goal of this project is to forecast sticker sales in different countries. Th
   - [x] Serving it via a web service (with Flask or specialized software - BentoML, KServe, etc)
 - [x] Files with dependencies
   - [x] conda environment file, requirements.txt or pyproject.toml
-- [ ] `Dockerfile` for running the service
+- [x] `Dockerfile` for running the service
 - [ ] Deployment
   - [ ] URL to the service you deployed or
   - [ ] Video or image of how you interact with the deployed service

@@ -33,7 +33,6 @@ def transform_date(df, col):
 
 # remove null rows
 df_train_clean = df_train.dropna()
-# df_test_clean = df_test.dropna()
 
 df_train_clean = transform_date(df_train_clean, 'date')
 df_test_clean = transform_date(df_test, 'date')
@@ -51,31 +50,10 @@ y_train = df_train_clean['num_sold']
 X_train = df_train_clean.drop(columns=['id', 'num_sold', 'date'])
 X_test = df_test_clean.drop(columns=['id', 'date'])
 
-def fit_model_with_tss(X, y, model, n_splits=5):
-    tss = TimeSeriesSplit(n_splits=n_splits)
-    scores = []
-
-    fold = 1
-
-    for train_idx, val_idx in tss.split(X):
-        print(f'    Training fold {fold}...', end='\r')
-        fold += 1
-        X_train, y_train = X.iloc[train_idx], y.iloc[train_idx]
-        X_val, y_val = X.iloc[val_idx], y.iloc[val_idx]
-
-        model.fit(X_train, y_train)
-        y_pred = model.predict(X_val)
-
-        mape = mean_absolute_percentage_error(y_val, y_pred)
-        scores.append(mape)
-    print(' '*30, end='\r')
-    
-    return [np.mean(scores), np.std(scores)]
-
 rf_final = RandomForestRegressor(n_estimators=100, max_depth=15, random_state=SEED,
                                 n_jobs=-1, min_samples_leaf=1)
-rf_final.fit(X_train, y_train)
-final_pred = rf_final.predict(X_test)
+rf_final.fit(X_train.values, y_train.values)
+final_pred = rf_final.predict(X_test.values)
 
 # create submission file for kaggle
 if generate_kaggle_submission:
